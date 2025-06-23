@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="agricocw_ContactList.MainPage"
+             Title="Contacts">
+
+    <CollectionView x:Name="contactsView"
+                    SelectionMode="Single"
+                    SelectionChanged="OnContactSelected"
+                    IsGrouped="True"
+                    Margin="10">
+
+        <!-- Group Header -->
+        <CollectionView.GroupHeaderTemplate>
+            <DataTemplate>
+                <StackLayout BackgroundColor="#eeeeee" Padding="8">
+                    <Label Text="{Binding Name}"
+                           FontAttributes="Bold"
+                           FontSize="20"
+                           TextColor="Black"/>
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.GroupHeaderTemplate>
+
+        <!-- Contact Item Template -->
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <Image
