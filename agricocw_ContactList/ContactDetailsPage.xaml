@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="agricocw_ContactList.ContactDetailsPage"
+             Title="Contact Details">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Image x:Name="contactImage"
+                   HeightRequest="200"
+                   HorizontalOptions="Center"
+                   Aspect="AspectFill" />
+
+            <Label x:Name="nameLabel"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label x:Name="emailLabel"
+                   FontSize="16" />
+
+            <Label x:Name="phoneLabel"
+                   FontSize="16" />
+
+            <Label x:Name="descriptionLabel"
+                   FontSize="16"
+                   LineBreakMode="WordWrap" />
+
+            <Button Text="Back"
+                    Clicked="OnBackClicked"
+                    HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
